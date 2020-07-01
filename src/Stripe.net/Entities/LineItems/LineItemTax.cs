@@ -5,17 +5,11 @@ namespace Stripe
 
     public class LineItemTax : StripeEntity<LineItemTax>
     {
-        /// <summary>
-        /// Amount of tax for this line item.
-        /// </summary>
         [JsonProperty("amount")]
         public long Amount { get; set; }
 
         #region Expandable TaxRate
 
-        /// <summary>
-        /// ID of the tax rate applied to this line item.
-        /// </summary>
         [JsonIgnore]
         public string TaxRateId
         {
@@ -23,9 +17,6 @@ namespace Stripe
             set => this.InternalTaxRate = SetExpandableFieldId(value, this.InternalTaxRate);
         }
 
-        /// <summary>
-        /// (Expanded) The tax rate applied to this line item. (if it was expanded).
-        /// </summary>
         [JsonIgnore]
         public TaxRate TaxRate
         {
