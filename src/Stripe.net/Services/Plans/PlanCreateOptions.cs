@@ -41,7 +41,7 @@ namespace Stripe
 
         [JsonProperty("product")]
         [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<string, PlanProductCreateOptions> Product { get; set; }
+        public AnyOf<string, PlanProductOptions> Product { get; set; }
 
         [JsonProperty("tiers")]
         public List<PlanTierOptions> Tiers { get; set; }

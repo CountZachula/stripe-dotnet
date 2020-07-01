@@ -99,7 +99,6 @@ namespace Stripe
         [JsonProperty("deleted", NullValueHandling = NullValueHandling.Ignore)]
         public bool? Deleted { get; set; }
 
-        // This property is not returned as part of standard API requests.
         [JsonProperty("description")]
         public string Description { get; set; }
 
@@ -118,11 +117,9 @@ namespace Stripe
         [JsonProperty("funding")]
         public string Funding { get; set; }
 
-        // This property is not returned as part of standard API requests.
         [JsonProperty("iin")]
         public string Iin { get; set; }
 
-        // This property is not returned as part of standard API requests.
         [JsonProperty("issuer")]
         public string Issuer { get; set; }
 

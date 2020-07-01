@@ -1,6 +1,5 @@
 namespace Stripe
 {
-    using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
     using Stripe.Infrastructure;
@@ -29,8 +28,8 @@ namespace Stripe
         public List<string> DefaultTaxRates { get; set; }
 
         [JsonProperty("end_date")]
-        [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? EndDate { get; set; }
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<long?, string> EndDate { get; set; }
 
         [JsonProperty("invoice_settings")]
         public SubscriptionScheduleInvoiceSettingsOptions InvoiceSettings { get; set; }
@@ -45,10 +44,9 @@ namespace Stripe
         public string ProrationBehavior { get; set; }
 
         [JsonProperty("start_date")]
-        [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? StartDate { get; set; }
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<long?, string> StartDate { get; set; }
 
-        [Obsolete("Use DefaultTaxRates")]
         [JsonProperty("tax_percent")]
         public decimal? TaxPercent { get; set; }
 
@@ -59,7 +57,7 @@ namespace Stripe
         public bool? Trial { get; set; }
 
         [JsonProperty("trial_end")]
-        [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? TrialEnd { get; set; }
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<long?, string> TrialEnd { get; set; }
     }
 }

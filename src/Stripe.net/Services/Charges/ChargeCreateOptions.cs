@@ -2,12 +2,14 @@ namespace Stripe
 {
     using System.Collections.Generic;
     using Newtonsoft.Json;
-    using Stripe.Infrastructure;
 
     public class ChargeCreateOptions : BaseOptions, IHasMetadata
     {
         [JsonProperty("amount")]
         public long? Amount { get; set; }
+
+        [JsonProperty("application_fee")]
+        public long? ApplicationFee { get; set; }
 
         [JsonProperty("application_fee_amount")]
         public long? ApplicationFeeAmount { get; set; }
@@ -25,13 +27,7 @@ namespace Stripe
         public string Description { get; set; }
 
         [JsonProperty("destination")]
-        public ChargeDestinationCreateOptions Destination { get; set; }
-
-        [JsonProperty("exchange_rate")]
-        public decimal? ExchangeRate { get; set; }
-
-        [JsonProperty("level3")]
-        public ChargeLevel3Options Level3 { get; set; }
+        public ChargeDestinationOptions Destination { get; set; }
 
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
@@ -43,11 +39,10 @@ namespace Stripe
         public string ReceiptEmail { get; set; }
 
         [JsonProperty("shipping")]
-        public ChargeShippingOptions Shipping { get; set; }
+        public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("source")]
-        [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<string, CardCreateNestedOptions> Source { get; set; }
+        public string Source { get; set; }
 
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }

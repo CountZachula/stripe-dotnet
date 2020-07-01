@@ -19,8 +19,5 @@ namespace Stripe
 
         [JsonProperty("source_order")]
         public SourceSourceOrderOptions SourceOrder { get; set; }
-
-        [JsonProperty("card")]
-        public SourceCardUpdateOptions Card { get; set; }
     }
 }

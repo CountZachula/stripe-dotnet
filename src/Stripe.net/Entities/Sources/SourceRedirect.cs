@@ -5,7 +5,7 @@ namespace Stripe
     public class SourceRedirect : StripeEntity<SourceRedirect>
     {
         [JsonProperty("failure_reason")]
-        public RedirectFailureReason? FailureReason { get; set; }
+        public string FailureReason { get; set; }
 
         [JsonProperty("return_url")]
         public string ReturnUrl { get; set; }

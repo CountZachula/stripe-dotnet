@@ -1,4 +1,4 @@
-namespace Stripe
+namespace Stripe.Issuing
 {
     using System.Collections.Generic;
     using Newtonsoft.Json;
@@ -6,7 +6,7 @@ namespace Stripe
     public class CardholderSpendingControlsSpendingLimit : StripeEntity<CardholderSpendingControlsSpendingLimit>
     {
         [JsonProperty("amount")]
-        public long? Amount { get; set; }
+        public long Amount { get; set; }
 
         [JsonProperty("categories")]
         public List<string> Categories { get; set; }

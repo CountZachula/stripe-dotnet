@@ -16,6 +16,9 @@ namespace Stripe
         [JsonProperty("directors_provided")]
         public bool? DirectorsProvided { get; set; }
 
+        [JsonProperty("executives_provided")]
+        public bool? ExecutivesProvided { get; set; }
+
         [JsonProperty("name")]
         public string Name { get; set; }
 
@@ -30,6 +33,9 @@ namespace Stripe
 
         [JsonProperty("phone")]
         public string Phone { get; set; }
+
+        [JsonProperty("structure")]
+        public string Structure { get; set; }
 
         [JsonProperty("tax_id")]
         public string TaxId { get; set; }

@@ -9,5 +9,8 @@ namespace Stripe
 
         [JsonProperty("type")]
         public string Type { get; set; }
+
+        [JsonProperty("use_stripe_sdk")]
+        public PaymentIntentNextActionUseStripeSdk UseStripeSdk { get; set; }
     }
 }

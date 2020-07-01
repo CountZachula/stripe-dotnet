@@ -1,7 +1,6 @@
 namespace Stripe
 {
     using Newtonsoft.Json;
-    using Stripe.Infrastructure;
 
     public class ThreeDSecureCreateOptions : BaseOptions
     {
@@ -9,8 +8,7 @@ namespace Stripe
         public long? Amount { get; set; }
 
         [JsonProperty("card")]
-        [AllowNameMismatch]
-        public string CardTokenOrCardId { get; set; }
+        public string Card { get; set; }
 
         [JsonProperty("currency")]
         public string Currency { get; set; }

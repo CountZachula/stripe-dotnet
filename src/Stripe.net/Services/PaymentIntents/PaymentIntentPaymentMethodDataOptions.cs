@@ -1,27 +1,46 @@
 namespace Stripe
 {
-    using System;
+    using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class PaymentIntentPaymentMethodDataOptions : INestedOptions
+    public class PaymentIntentPaymentMethodDataOptions : INestedOptions,
+        IHasMetadata
     {
         [JsonProperty("au_becs_debit")]
-        public PaymentMethodAuBecsDebitCreateOptions AuBecsDebit { get; set; }
+        public PaymentIntentPaymentMethodDataAuBecsDebitOptions AuBecsDebit { get; set; }
+
+        [JsonProperty("bacs_debit")]
+        public PaymentIntentPaymentMethodDataBacsDebitOptions BacsDebit { get; set; }
+
+        [JsonProperty("bancontact")]
+        public PaymentIntentPaymentMethodDataBancontactOptions Bancontact { get; set; }
 
         [JsonProperty("billing_details")]
-        public BillingDetailsOptions BillingDetails { get; set; }
+        public PaymentIntentPaymentMethodDataBillingDetailsOptions BillingDetails { get; set; }
 
-        [JsonProperty("card")]
-        public PaymentMethodCardCreateOptions Card { get; set; }
+        [JsonProperty("eps")]
+        public PaymentIntentPaymentMethodDataEpsOptions Eps { get; set; }
 
         [JsonProperty("fpx")]
-        public PaymentMethodFpxCreateOptions Fpx { get; set; }
+        public PaymentIntentPaymentMethodDataFpxOptions Fpx { get; set; }
+
+        [JsonProperty("giropay")]
+        public PaymentIntentPaymentMethodDataGiropayOptions Giropay { get; set; }
 
         [JsonProperty("ideal")]
-        public PaymentMethodIdealCreateOptions Ideal { get; set; }
+        public PaymentIntentPaymentMethodDataIdealOptions Ideal { get; set; }
+
+        [JsonProperty("interac_present")]
+        public PaymentIntentPaymentMethodDataInteracPresentOptions InteracPresent { get; set; }
+
+        [JsonProperty("metadata")]
+        public Dictionary<string, string> Metadata { get; set; }
+
+        [JsonProperty("p24")]
+        public PaymentIntentPaymentMethodDataP24Options P24 { get; set; }
 
         [JsonProperty("sepa_debit")]
-        public PaymentMethodSepaDebitCreateOptions SepaDebit { get; set; }
+        public PaymentIntentPaymentMethodDataSepaDebitOptions SepaDebit { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }

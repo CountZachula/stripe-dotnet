@@ -11,7 +11,7 @@ namespace Stripe.Issuing
         public string Unit { get; set; }
 
         [JsonProperty("unit_cost_decimal")]
-        public decimal? UnitCostDecimal { get; set; }
+        public decimal UnitCostDecimal { get; set; }
 
         [JsonProperty("volume_decimal")]
         public decimal? VolumeDecimal { get; set; }

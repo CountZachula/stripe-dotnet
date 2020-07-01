@@ -1,6 +1,5 @@
 namespace Stripe
 {
-    using System;
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
@@ -12,16 +11,12 @@ namespace Stripe
         [JsonProperty("end_behavior")]
         public string EndBehavior { get; set; }
 
-        [JsonProperty("invoice_settings")]
-        public SubscriptionScheduleInvoiceSettingsOptions InvoiceSettings { get; set; }
-
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
         [JsonProperty("phases")]
         public List<SubscriptionSchedulePhaseOptions> Phases { get; set; }
 
-        [Obsolete("Use ProrationBehavior instead")]
         [JsonProperty("prorate")]
         public bool? Prorate { get; set; }
 

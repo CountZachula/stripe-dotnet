@@ -13,8 +13,11 @@ namespace Stripe
         [JsonProperty("description")]
         public string Description { get; set; }
 
+        [JsonProperty("parent")]
+        public string Parent { get; set; }
+
         [JsonProperty("quantity")]
-        public long? Quantity { get; set; }
+        public long Quantity { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }

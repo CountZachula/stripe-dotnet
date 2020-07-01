@@ -4,7 +4,10 @@ namespace Stripe
 
     public class SourceEps : StripeEntity<SourceEps>
     {
-        // The Eps sources do not have any specific property today.
-        // The only ones available in the spec are for private betas.
+        [JsonProperty("reference")]
+        public string Reference { get; set; }
+
+        [JsonProperty("statement_descriptor")]
+        public string StatementDescriptor { get; set; }
     }
 }

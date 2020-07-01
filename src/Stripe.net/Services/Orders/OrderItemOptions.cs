@@ -7,9 +7,6 @@ namespace Stripe
         [JsonProperty("amount")]
         public long? Amount { get; set; }
 
-        [JsonProperty("currency")]
-        public string Currency { get; set; }
-
         [JsonProperty("description")]
         public string Description { get; set; }
 

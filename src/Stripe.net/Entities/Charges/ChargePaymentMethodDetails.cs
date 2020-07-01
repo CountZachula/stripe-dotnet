@@ -58,8 +58,14 @@ namespace Stripe
         [JsonProperty("p24")]
         public ChargePaymentMethodDetailsP24 P24 { get; set; }
 
+        [JsonProperty("sepa_credit_transfer")]
+        public ChargePaymentMethodDetailsSepaCreditTransfer SepaCreditTransfer { get; set; }
+
         [JsonProperty("sepa_debit")]
         public ChargePaymentMethodDetailsSepaDebit SepaDebit { get; set; }
+
+        [JsonProperty("sofort")]
+        public ChargePaymentMethodDetailsSofort Sofort { get; set; }
 
         [JsonProperty("stripe_account")]
         public ChargePaymentMethodDetailsStripeAccount StripeAccount { get; set; }

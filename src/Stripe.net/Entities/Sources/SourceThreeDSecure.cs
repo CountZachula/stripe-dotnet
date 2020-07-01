@@ -11,7 +11,7 @@ namespace Stripe
         public string AddressZipCheck { get; set; }
 
         [JsonProperty("authenticated")]
-        public bool Authenticated { get; set; }
+        public bool? Authenticated { get; set; }
 
         [JsonProperty("brand")]
         public string Brand { get; set; }
@@ -35,10 +35,10 @@ namespace Stripe
         public string DynamicLast4 { get; set; }
 
         [JsonProperty("exp_month")]
-        public long ExpMonth { get; set; }
+        public long? ExpMonth { get; set; }
 
         [JsonProperty("exp_year")]
-        public long ExpYear { get; set; }
+        public long? ExpYear { get; set; }
 
         [JsonProperty("fingerprint")]
         public string Fingerprint { get; set; }
@@ -54,6 +54,9 @@ namespace Stripe
 
         [JsonProperty("last4")]
         public string Last4 { get; set; }
+
+        [JsonProperty("name")]
+        public string Name { get; set; }
 
         [JsonProperty("three_d_secure")]
         public string ThreeDSecure { get; set; }

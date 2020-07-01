@@ -4,6 +4,9 @@ namespace Stripe
 
     public class ChargeDestinationOptions : INestedOptions
     {
+        [JsonProperty("account")]
+        public string Account { get; set; }
+
         [JsonProperty("amount")]
         public long? Amount { get; set; }
     }

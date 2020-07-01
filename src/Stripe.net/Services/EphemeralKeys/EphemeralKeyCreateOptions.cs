@@ -9,8 +9,5 @@ namespace Stripe
 
         [JsonProperty("issuing_card")]
         public string IssuingCard { get; set; }
-
-        [JsonIgnore]
-        public string StripeVersion { get; set; }
     }
 }

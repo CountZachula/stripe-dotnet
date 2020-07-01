@@ -5,6 +5,6 @@ namespace Stripe.Issuing
     public class CardholderBillingOptions : INestedOptions
     {
         [JsonProperty("address")]
-        public AddressOptions Address { get; set; }
+        public CardholderBillingAddressOptions Address { get; set; }
     }
 }

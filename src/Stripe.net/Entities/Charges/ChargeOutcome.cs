@@ -27,15 +27,15 @@ namespace Stripe
         }
 
         [JsonIgnore]
-        public Radar.Rule Rule
+        public Rule Rule
         {
             get => this.InternalRule?.ExpandedObject;
             set => this.InternalRule = SetExpandableFieldObject(value, this.InternalRule);
         }
 
         [JsonProperty("rule")]
-        [JsonConverter(typeof(ExpandableFieldConverter<Radar.Rule>))]
-        internal ExpandableField<Radar.Rule> InternalRule { get; set; }
+        [JsonConverter(typeof(ExpandableFieldConverter<Rule>))]
+        internal ExpandableField<Rule> InternalRule { get; set; }
         #endregion
 
         [JsonProperty("seller_message")]

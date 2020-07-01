@@ -14,7 +14,7 @@ namespace Stripe.Issuing
 
         [JsonProperty("eta")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime Eta { get; set; }
+        public DateTime? Eta { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }

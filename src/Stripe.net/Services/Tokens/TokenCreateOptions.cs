@@ -9,8 +9,7 @@ namespace Stripe
         public TokenAccountOptions Account { get; set; }
 
         [JsonProperty("bank_account")]
-        [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<string, BankAccountOptions> BankAccount { get; set; }
+        public TokenBankAccountOptions BankAccount { get; set; }
 
         [JsonProperty("card")]
         [JsonConverter(typeof(AnyOfConverter))]
@@ -21,5 +20,8 @@ namespace Stripe
 
         [JsonProperty("person")]
         public TokenPersonOptions Person { get; set; }
+
+        [JsonProperty("pii")]
+        public TokenPiiOptions Pii { get; set; }
     }
 }

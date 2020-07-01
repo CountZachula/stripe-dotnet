@@ -1,12 +1,11 @@
 namespace Stripe
 {
-    using System.Collections.Generic;
     using Newtonsoft.Json;
 
     public class SubscriptionSchedulePhaseItemOptions : INestedOptions
     {
         [JsonProperty("billing_thresholds")]
-        public SubscriptionItemBillingThresholdsOptions BillingThresholds { get; set; }
+        public SubscriptionSchedulePhasePlanBillingThresholdsOptions BillingThresholds { get; set; }
 
         [JsonProperty("plan")]
         public string Plan { get; set; }
@@ -15,7 +14,7 @@ namespace Stripe
         public string Price { get; set; }
 
         [JsonProperty("price_data")]
-        public SubscriptionItemPriceDataOptions PriceData { get; set; }
+        public SubscriptionSchedulePhasePlanPriceDataOptions PriceData { get; set; }
 
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }

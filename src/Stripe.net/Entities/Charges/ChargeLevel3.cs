@@ -9,7 +9,7 @@ namespace Stripe
         public string CustomerReference { get; set; }
 
         [JsonProperty("line_items")]
-        public List<ChargeLevel3LineItem> LineItems { get; set; }
+        public List<Level3LineItems> LineItems { get; set; }
 
         [JsonProperty("merchant_reference")]
         public string MerchantReference { get; set; }

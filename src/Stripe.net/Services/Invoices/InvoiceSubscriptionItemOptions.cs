@@ -3,19 +3,21 @@ namespace Stripe
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class InvoiceSubscriptionItemOptions : BaseOptions, IHasId, IHasMetadata
+    public class InvoiceSubscriptionItemOptions : INestedOptions,
+        IHasId,
+        IHasMetadata
     {
-        [JsonProperty("id")]
-        public string Id { get; set; }
-
         [JsonProperty("billing_thresholds")]
-        public SubscriptionItemBillingThresholdsOptions BillingThresholds { get; set; }
+        public InvoiceSubscriptionItemBillingThresholdsOptions BillingThresholds { get; set; }
 
         [JsonProperty("clear_usage")]
         public bool? ClearUsage { get; set; }
 
         [JsonProperty("deleted")]
         public bool? Deleted { get; set; }
+
+        [JsonProperty("id")]
+        public string Id { get; set; }
 
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
@@ -27,7 +29,7 @@ namespace Stripe
         public string Price { get; set; }
 
         [JsonProperty("price_data")]
-        public SubscriptionItemPriceDataOptions PriceData { get; set; }
+        public InvoiceSubscriptionItemPriceDataOptions PriceData { get; set; }
 
         [JsonProperty("quantity")]
         public long? Quantity { get; set; }

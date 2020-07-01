@@ -11,9 +11,6 @@ namespace Stripe
         [JsonProperty("description")]
         public string Description { get; set; }
 
-        [JsonProperty("exchange_rate")]
-        public decimal? ExchangeRate { get; set; }
-
         [JsonProperty("fraud_details")]
         public ChargeFraudDetailsOptions FraudDetails { get; set; }
 
@@ -24,7 +21,7 @@ namespace Stripe
         public string ReceiptEmail { get; set; }
 
         [JsonProperty("shipping")]
-        public ChargeShippingOptions Shipping { get; set; }
+        public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("transfer_group")]
         public string TransferGroup { get; set; }

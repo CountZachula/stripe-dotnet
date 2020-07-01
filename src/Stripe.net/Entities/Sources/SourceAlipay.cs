@@ -4,7 +4,13 @@ namespace Stripe
 
     public class SourceAlipay : StripeEntity<SourceAlipay>
     {
-        // The Alipay sources do not have any specific property today.
-        // The only ones available in the spec are used for mobile SDKs.
+        [JsonProperty("data_string")]
+        public string DataString { get; set; }
+
+        [JsonProperty("native_url")]
+        public string NativeUrl { get; set; }
+
+        [JsonProperty("statement_descriptor")]
+        public string StatementDescriptor { get; set; }
     }
 }

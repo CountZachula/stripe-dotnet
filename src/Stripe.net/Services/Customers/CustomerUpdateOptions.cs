@@ -49,13 +49,13 @@ namespace Stripe
         public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("source")]
-        [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<string, CardCreateNestedOptions> Source { get; set; }
+        public string Source { get; set; }
 
         [JsonProperty("tax_exempt")]
         public string TaxExempt { get; set; }
 
-        [JsonProperty("validate")]
-        public bool? Validate { get; set; }
+        [JsonProperty("trial_end")]
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<DateTime?, string> TrialEnd { get; set; }
     }
 }

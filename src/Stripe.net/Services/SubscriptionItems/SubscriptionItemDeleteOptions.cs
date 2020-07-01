@@ -9,6 +9,9 @@ namespace Stripe
         [JsonProperty("clear_usage")]
         public bool? ClearUsage { get; set; }
 
+        [JsonProperty("prorate")]
+        public bool? Prorate { get; set; }
+
         [JsonProperty("proration_behavior")]
         public string ProrationBehavior { get; set; }
 

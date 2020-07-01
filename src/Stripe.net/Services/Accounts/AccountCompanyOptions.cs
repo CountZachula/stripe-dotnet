@@ -5,7 +5,7 @@ namespace Stripe
     public class AccountCompanyOptions : INestedOptions
     {
         [JsonProperty("address")]
-        public AddressOptions Address { get; set; }
+        public AccountCompanyAddressOptions Address { get; set; }
 
         [JsonProperty("address_kana")]
         public AddressJapanOptions AddressKana { get; set; }

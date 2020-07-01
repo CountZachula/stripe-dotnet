@@ -1,15 +1,10 @@
 namespace Stripe
 {
-    using System;
-    using System.Collections.Generic;
     using Newtonsoft.Json;
     using Stripe.Infrastructure;
 
     public class PaymentIntentConfirmOptions : BaseOptions
     {
-        [JsonProperty("client_secret")]
-        public string ClientSecret { get; set; }
-
         [JsonProperty("error_on_requires_action")]
         public bool? ErrorOnRequiresAction { get; set; }
 
@@ -17,10 +12,12 @@ namespace Stripe
         public string Mandate { get; set; }
 
         [JsonProperty("mandate_data")]
-        public PaymentIntentMandateDataOptions MandateData { get; set; }
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<PaymentIntentMandateData1Options, PaymentIntentMandateData2Options> MandateData { get; set; }
 
         [JsonProperty("off_session")]
-        public bool? OffSession { get; set; }
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<bool?, string> OffSession { get; set; }
 
         [JsonProperty("payment_method")]
         public string PaymentMethod { get; set; }
@@ -30,9 +27,6 @@ namespace Stripe
 
         [JsonProperty("payment_method_options")]
         public PaymentIntentPaymentMethodOptionsOptions PaymentMethodOptions { get; set; }
-
-        [JsonProperty("payment_method_types")]
-        public List<string> PaymentMethodTypes { get; set; }
 
         [JsonProperty("receipt_email")]
         public string ReceiptEmail { get; set; }
@@ -47,7 +41,7 @@ namespace Stripe
         public string SetupFutureUsage { get; set; }
 
         [JsonProperty("shipping")]
-        public ChargeShippingOptions Shipping { get; set; }
+        public ShippingOptions Shipping { get; set; }
 
         [JsonProperty("source")]
         public string Source { get; set; }

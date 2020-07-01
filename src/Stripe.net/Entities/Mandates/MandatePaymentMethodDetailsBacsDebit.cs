@@ -5,7 +5,7 @@ namespace Stripe
     public class MandatePaymentMethodDetailsBacsDebit : StripeEntity<MandatePaymentMethodDetailsBacsDebit>
     {
         [JsonProperty("network_status")]
-        public long NetworkStatus { get; set; }
+        public string NetworkStatus { get; set; }
 
         [JsonProperty("reference")]
         public string Reference { get; set; }

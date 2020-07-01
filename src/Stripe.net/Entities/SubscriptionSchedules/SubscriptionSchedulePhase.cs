@@ -66,19 +66,21 @@ namespace Stripe
 
         [JsonProperty("end_date")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? EndDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         [JsonProperty("invoice_settings")]
         public SubscriptionScheduleInvoiceSettings InvoiceSettings { get; set; }
 
         [JsonProperty("plans")]
-        public List<SubscriptionSchedulePhaseItem> Plans { get; set; }
+        public List<SubscriptionSchedulePhasePlan> Plans { get; set; }
+
+        [JsonProperty("proration_behavior")]
+        public string ProrationBehavior { get; set; }
 
         [JsonProperty("start_date")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? StartDate { get; set; }
+        public DateTime StartDate { get; set; }
 
-        [Obsolete("Use DefaultTaxRates")]
         [JsonProperty("tax_percent")]
         public decimal? TaxPercent { get; set; }
 

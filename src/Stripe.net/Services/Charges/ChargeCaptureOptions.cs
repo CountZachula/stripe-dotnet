@@ -13,12 +13,6 @@ namespace Stripe
         [JsonProperty("application_fee_amount")]
         public long? ApplicationFeeAmount { get; set; }
 
-        [JsonProperty("destination")]
-        public ChargeDestinationOptions Destination { get; set; }
-
-        [JsonProperty("exchange_rate")]
-        public decimal? ExchangeRate { get; set; }
-
         [JsonProperty("receipt_email")]
         public string ReceiptEmail { get; set; }
 
@@ -27,5 +21,11 @@ namespace Stripe
 
         [JsonProperty("statement_descriptor_suffix")]
         public string StatementDescriptorSuffix { get; set; }
+
+        [JsonProperty("transfer_data")]
+        public ChargeTransferDataOptions TransferData { get; set; }
+
+        [JsonProperty("transfer_group")]
+        public string TransferGroup { get; set; }
     }
 }

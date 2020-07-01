@@ -19,6 +19,6 @@ namespace Stripe
 
         [JsonProperty("up_to")]
         [JsonConverter(typeof(AnyOfConverter))]
-        public AnyOf<long?, PlanTierUpTo> UpTo { get; set; }
+        public AnyOf<long?, string> UpTo { get; set; }
     }
 }

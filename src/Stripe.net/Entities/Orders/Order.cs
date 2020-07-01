@@ -99,7 +99,7 @@ namespace Stripe
         public Shipping Shipping { get; set; }
 
         [JsonProperty("shipping_methods")]
-        public List<OrderShippingMethod> ShippingMethods { get; set; }
+        public List<ShippingMethod> ShippingMethods { get; set; }
 
         [JsonProperty("status")]
         public string Status { get; set; }

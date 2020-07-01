@@ -14,7 +14,7 @@ namespace Stripe
         public string ProductDescription { get; set; }
 
         [JsonProperty("support_address")]
-        public AddressOptions SupportAddress { get; set; }
+        public AccountBusinessProfileSupportAddressOptions SupportAddress { get; set; }
 
         [JsonProperty("support_email")]
         public string SupportEmail { get; set; }

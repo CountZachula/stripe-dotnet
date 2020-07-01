@@ -3,8 +3,11 @@ namespace Stripe
     using System.Collections.Generic;
     using Newtonsoft.Json;
 
-    public class SubscriptionItemOptions : IHasId, INestedOptions, IHasMetadata
+    public class SubscriptionItemOptions : INestedOptions, IHasId, IHasMetadata
     {
+        [JsonProperty("billing_thresholds")]
+        public SubscriptionItemBillingThresholdsOptions BillingThresholds { get; set; }
+
         [JsonProperty("clear_usage")]
         public bool? ClearUsage { get; set; }
 

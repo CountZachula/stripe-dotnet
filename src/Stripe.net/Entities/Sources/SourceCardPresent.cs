@@ -31,6 +31,9 @@ namespace Stripe
         [JsonProperty("dedicated_file_name")]
         public string DedicatedFileName { get; set; }
 
+        [JsonProperty("description")]
+        public string Description { get; set; }
+
         [JsonProperty("emv_auth_data")]
         public string EmvAuthData { get; set; }
 
@@ -51,6 +54,12 @@ namespace Stripe
 
         [JsonProperty("funding")]
         public string Funding { get; set; }
+
+        [JsonProperty("iin")]
+        public string Iin { get; set; }
+
+        [JsonProperty("issuer")]
+        public string Issuer { get; set; }
 
         [JsonProperty("last4")]
         public string Last4 { get; set; }

@@ -12,5 +12,8 @@ namespace Stripe
 
         [JsonProperty("bic")]
         public string Bic { get; set; }
+
+        [JsonProperty("statement_descriptor")]
+        public string StatementDescriptor { get; set; }
     }
 }

@@ -1,6 +1,7 @@
-namespace Stripe
+namespace Stripe.Issuing
 {
     using Newtonsoft.Json;
+    using Stripe.Infrastructure;
 
     public class CardholderIndividual : StripeEntity<CardholderIndividual>
     {

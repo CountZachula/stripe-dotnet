@@ -27,7 +27,7 @@ namespace Stripe.Checkout
         public string SetupFutureUsage { get; set; }
 
         [JsonProperty("shipping")]
-        public ChargeShippingOptions Shipping { get; set; }
+        public SessionPaymentIntentDataShippingOptions Shipping { get; set; }
 
         [JsonProperty("statement_descriptor")]
         public string StatementDescriptor { get; set; }
@@ -36,7 +36,7 @@ namespace Stripe.Checkout
         public string StatementDescriptorSuffix { get; set; }
 
         [JsonProperty("transfer_data")]
-        public SessionPaymentIntentTransferDataOptions TransferData { get; set; }
+        public SessionPaymentIntentDataTransferDataOptions TransferData { get; set; }
 
         [JsonProperty("transfer_group")]
         public string TransferGroup { get; set; }

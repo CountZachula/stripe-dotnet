@@ -7,49 +7,50 @@ namespace Stripe
     public class PaymentMethodCreateOptions : BaseOptions, IHasMetadata
     {
         [JsonProperty("au_becs_debit")]
-        public PaymentMethodAuBecsDebitCreateOptions AuBecsDebit { get; set; }
+        public PaymentMethodAuBecsDebitOptions AuBecsDebit { get; set; }
 
         [JsonProperty("bacs_debit")]
-        public PaymentMethodBacsDebitCreateOptions BacsDebit { get; set; }
+        public PaymentMethodBacsDebitOptions BacsDebit { get; set; }
 
         [JsonProperty("bancontact")]
-        public PaymentMethodBancontactCreateOptions Bancontact { get; set; }
+        public PaymentMethodBancontactOptions Bancontact { get; set; }
 
         [JsonProperty("billing_details")]
         public BillingDetailsOptions BillingDetails { get; set; }
 
         [JsonProperty("card")]
-        public PaymentMethodCardCreateOptions Card { get; set; }
+        [JsonConverter(typeof(AnyOfConverter))]
+        public AnyOf<PaymentMethodCard1Options, PaymentMethodCard2Options> Card { get; set; }
 
         [JsonProperty("customer")]
         public string Customer { get; set; }
 
         [JsonProperty("eps")]
-        public PaymentMethodEpsCreateOptions Eps { get; set; }
+        public PaymentMethodEpsOptions Eps { get; set; }
 
         [JsonProperty("fpx")]
-        public PaymentMethodFpxCreateOptions Fpx { get; set; }
+        public PaymentMethodFpxOptions Fpx { get; set; }
 
         [JsonProperty("giropay")]
-        public PaymentMethodGiropayCreateOptions Giropay { get; set; }
+        public PaymentMethodGiropayOptions Giropay { get; set; }
 
         [JsonProperty("ideal")]
-        public PaymentMethodIdealCreateOptions Ideal { get; set; }
+        public PaymentMethodIdealOptions Ideal { get; set; }
 
         [JsonProperty("interac_present")]
-        public PaymentMethodInteracPresentCreateOptions InteracPresent { get; set; }
+        public PaymentMethodInteracPresentOptions InteracPresent { get; set; }
 
         [JsonProperty("metadata")]
         public Dictionary<string, string> Metadata { get; set; }
 
         [JsonProperty("p24")]
-        public PaymentMethodP24CreateOptions P24 { get; set; }
+        public PaymentMethodP24Options P24 { get; set; }
 
         [JsonProperty("payment_method")]
         public string PaymentMethod { get; set; }
 
         [JsonProperty("sepa_debit")]
-        public PaymentMethodSepaDebitCreateOptions SepaDebit { get; set; }
+        public PaymentMethodSepaDebitOptions SepaDebit { get; set; }
 
         [JsonProperty("type")]
         public string Type { get; set; }

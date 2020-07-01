@@ -8,10 +8,10 @@ namespace Stripe
     {
         [JsonProperty("end_date")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? EndDate { get; set; }
+        public DateTime EndDate { get; set; }
 
         [JsonProperty("start_date")]
         [JsonConverter(typeof(DateTimeConverter))]
-        public DateTime? StartDate { get; set; }
+        public DateTime StartDate { get; set; }
     }
 }

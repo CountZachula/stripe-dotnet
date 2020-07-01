@@ -9,6 +9,6 @@ namespace Stripe
         public List<string> LineItemIds { get; set; }
 
         [JsonProperty("usage_gte")]
-        public long? UsageGte { get; set; }
+        public long UsageGte { get; set; }
     }
 }

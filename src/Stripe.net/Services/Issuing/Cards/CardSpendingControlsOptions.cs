@@ -13,8 +13,5 @@ namespace Stripe.Issuing
 
         [JsonProperty("spending_limits")]
         public List<CardSpendingControlsSpendingLimitOptions> SpendingLimits { get; set; }
-
-        [JsonProperty("spending_limits_currency")]
-        public string SpendingLimitsCurrency { get; set; }
     }
 }
